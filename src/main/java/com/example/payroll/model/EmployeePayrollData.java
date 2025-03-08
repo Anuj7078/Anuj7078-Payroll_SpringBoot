@@ -6,8 +6,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @Entity
 public class EmployeePayrollData {
 
@@ -18,9 +20,6 @@ public class EmployeePayrollData {
     private String gender;
     private String department;
     private long salary;
-
-    // Default constructor (required by JPA)
-    public EmployeePayrollData() {}
 
     // Constructor to initialize fields from EmployeePayrollDTO
     public EmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
